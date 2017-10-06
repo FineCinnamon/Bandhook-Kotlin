@@ -26,7 +26,6 @@ import android.view.ViewGroup
 import com.antonioleiva.bandhookkotlin.ui.activity.ViewAnkoComponent
 import com.antonioleiva.bandhookkotlin.ui.adapter.BaseAdapter
 import com.antonioleiva.bandhookkotlin.ui.adapter.ImageTitleAdapter
-import com.antonioleiva.bandhookkotlin.ui.custom.AutofitRecyclerView
 import com.antonioleiva.bandhookkotlin.ui.custom.autoFitRecycler
 import com.antonioleiva.bandhookkotlin.ui.entity.ImageTitle
 import com.antonioleiva.bandhookkotlin.ui.fragment.AlbumsFragmentContainer
@@ -75,7 +74,7 @@ class AlbumsFragment : Fragment() {
         lateinit var recycler: RecyclerView
 
         override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
-            recycler = autoFitRecycler().apply(AutofitRecyclerView::style)
+            recycler = autoFitRecycler().style()
             recycler
         }
     }
